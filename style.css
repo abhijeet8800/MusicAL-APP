@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+body{
+    background-color:rgb(15, 13, 13) ;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    font-family: 'Silkscreen', cursive;
+}
+
+nav ul{
+    display: flex;    /*will align all items to horizontal */
+    align-items: center;      /*will align img, home, about to center*/
+    list-style: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+}
+nav ul li{
+    padding: 0 12px;
+}
+.brand img{
+    width: 66px;
+    padding: 0 8px ;   /*will shift spotify text 8px right side of logo*/
+}
+.brand{
+    display: flex;
+    align-items: center;  /*for aligining spotify text to center*/
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+.container{
+   min-height: 65vh;        /*75%of height */
+   background-color: black;
+   color: white;
+   font-family:cursive;
+   display: flex;
+   flex-direction: column;
+   margin: 23px auto;       /*gives margin to the black box in which the text is written*/
+   width: 70%;
+   border-radius: 12px;
+   padding: 34px;          /*gives padding to text best of NCS...*/
+   background-image: url('pexels-dmitry-demidov-3784566\ \(1\).jpg');
+   background-size: cover;
+}
+
+.bottom{
+    position: sticky;
+    height: 100px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   /*will move all icons to down of the seek bar*/
+}
+ .icons{
+    margin-top: 14px;     /*will add margin to icons from seek bar*/
+ }
+
+ .icons i{
+    cursor: pointer;     /*will set your cursor to pointer at fontsome icons*/
+    width: 40px;
+ }
+
+#myProgressBar{
+    width: 140vh;       /* text-align: center;     it will not work as it is not a whole container */
+    cursor: pointer;
+}
+
+.songItem{
+    height: 50px;
+    color: white;
+    display: flex;
+    background-color: rgba(89, 87, 87, 0.085);  /*sets the background color of the division containing song infos*/
+    width: 40%;      /*sets the width b/w the song items i.e. the time song name and song image */
+    margin: 12px 0;  /*gives th margin from top b/w the adjacent songs*/
+    justify-content: space-between;     /*gives equal distance b/w adjacent song items i.e. time song image and song name*/
+    align-items: center;
+}
+
+img{
+    width: 48px;
+    margin: 0 20px;            /*margins the image from left from the division not the text*/
+    border-radius: 50px;       /*makes image circular*/
+}
+.timestamp i{
+    margin: 0 20px;        /*margins b/w time and play button*/
+    cursor: pointer;        /*makes cursor pointer at play button*/
+}
+
+.songInfo{
+    position: absolute;          /*positions the gif and name of the song as shown*/
+    left: 9vw;
+    font-family: 'Silkscreen', cursive;
+}
+
+.songInfo img{          
+    opacity: 0;                   /*sets the opacity of sponjbob gif*/
+    transition: opacity 0.2s ease-in;  /*transition for sponjbob*/
+}
